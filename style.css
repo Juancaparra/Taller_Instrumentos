@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #99a98f;
+    --decent-color: #d6e8db;
+    --accent-color: #fff;
+    --secondary-color: rgb(90, 88, 87);
+    --font-family: 'Poppins', sans-serif;
+    --text-color: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 98.6vw;
+    height: 50vh;
+    background: url(assets/img/phS5fwb0hzrBiTTP086J\ -\ transformed.jpeg);
+}
+
+
+header > h1 {
+    font-size: 7rem;
+    color: #D3D3D3;
+    font-family: "Dancing Script", cursive;
+    text-align: right;
+    margin-right: 6rem;
+}
+
