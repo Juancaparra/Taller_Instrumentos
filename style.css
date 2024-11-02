@@ -28,3 +28,133 @@ header > h1 {
     margin-right: 6rem;
 }
 
+.content-cart {
+    display: flex;
+    justify-content: right;
+}
+
+.cart-icon {
+    width: 10%;
+    height: 5rem;
+    display: flex;
+    justify-content: right;
+}
+
+.cart-button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(186, 186, 186);
+    border-color: transparent;
+    border-radius: 100%;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.cart-button img {
+    width: 15rem;
+}
+
+.product-list > h1 {
+    font-size: 3rem;
+    color: black;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.product-card {
+    background-color: #D3D3D3;
+    width: 20rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.product-card img {
+    width: 80%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.product-name {
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.add-to-cart {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: var(--accent-color);
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--decent-color);
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.cart-total {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 1rem;
+    background: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
