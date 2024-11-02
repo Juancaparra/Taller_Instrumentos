@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.classList.add('cart-item', 'individual-cart-item');
             cartItem.innerHTML = `
                 <span>(${item.quantity}x) ${item.name}</span>
-                <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}
+                <span class="cart-item-price">$${(item.price * item.quantity).toFixed()}
                 <button class="remove-btn" data-index="${index}"><i class="bi bi-x"></i></button>
                 </span>
             `;
@@ -75,21 +75,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCartTotal() {
-        cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
+        cartTotal.textContent = `$${totalAmount.toFixed(3)}`;
     }
 
-    // Evento para el botón de checkout
+    
     checkoutButton.addEventListener('click', () => {
         if (cartItems.length > 0) {
-            alert('¡Compra exitosa! Gracias por tu compra.');
+            const successMessage = document.getElementById('success-message');
+            successMessage.textContent = '¡Compra exitosa! Gracias por tu compra.';
+            successMessage.style.display = 'block'; 
+            successMessage.style.color = 'green'; 
+    
+            
             cartItems = [];
             totalAmount = 0;
-            updateCartUI(); // Actualiza la interfaz para vaciar el carrito
-            sidebar.classList.remove('open'); // Cierra el sidebar
+            updateCartUI();
+    
+            setTimeout(() => {
+                successMessage.style.display = 'none'; 
+            }, 3000);
         } else {
-            alert('El carrito está vacío. Por favor, añade productos.');
+            const successMessage = document.getElementById('success-message');
+            successMessage.textContent = 'El carrito está vacío. Por favor, añade productos.';
+            successMessage.style.display = 'block'; 
+            successMessage.style.color = 'red';
         }
     });
+    
 
     cartIcon.addEventListener('click', () => {
         sidebar.classList.toggle('open');
@@ -100,5 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('open');
     });
 
-    addEventListenersToButtons();  // Llama la función para añadir eventos a los botones de productos generados
+    addEventListenersToButtons(); 
 });
